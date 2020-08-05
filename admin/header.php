@@ -1,5 +1,7 @@
-<?php 
-    include '../include/config.php'; 
+<?php
+include '../include/config.php';
+include '../include/func.php';
+$perm = 99;
 ?>
 <!DOCTYPE html>
 <html lang="th">
@@ -22,3 +24,17 @@
 </head>
 
 <body>
+    <?php include '../include/session.php'; ?>
+    <nav class="navbar navbar-light shadow">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="../img/logo.png" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
+                โรงเรียนเบญจมราชูทิศ
+            </a>
+            <small class="navbar-text"><i class="fas fa-user"></i> <?php echo $_SESSION['gender'] .
+                '' .
+                $_SESSION['name'] .
+                '  ' .
+                $_SESSION['lastname']; ?> (ผู้ดูแลระบบ)</small>
+        </div>
+    </nav>

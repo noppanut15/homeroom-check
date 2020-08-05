@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #6c757d;
+      }
+
+      .cls-2 {
+        font-size: 31.75px;
+        text-anchor: end;
+        fill: #fff;
+        font-family: Prompt;
+        font-weight: 300;
+      }
+
+      .cls-3 {
+        font-size: 10.583px;
+      }
+    </style>
+  </defs>
+  <circle class="cls-1" cx="15" cy="15" r="15"/>
+  <text id="สร" class="cls-2" x="25.529" y="24.622"><tspan x="25.529">ส<tspan class="cls-3">ร</tspan></tspan></text>
+</svg>

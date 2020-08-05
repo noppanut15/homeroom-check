@@ -1,13 +1,266 @@
-@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap");
 
 body {
-    height: 100vh;
-    width: 100vw;
-    background: url("https://www.benjama.ac.th/bm-classchecker/img/0001.jpg") no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  /* background: url("https://www.benjama.ac.th/bm-classchecker/img/0001.jpg") no-repeat center center fixed; */
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
 
-    font-family: 'Prompt', sans-serif !important; 
+  font-family: "Prompt", sans-serif !important;
 }
+
+#check,
+#report {
+  cursor: pointer;
+}
+
+input[type="radio"] {
+  display: none;
+  cursor: pointer;
+}
+
+/* Present */
+.presentRadio input[type="radio"] + label {
+  color: #6c757d;
+  font-size: 30px;
+}
+
+.presentRadio input[type="radio"]:checked + label,
+.presentRadio input[type="radio"]:hover + label {
+  color: #28a745;
+}
+
+/* Leave */
+.leaveRadio input[type="radio"] + label {
+  background: url("../img/leave-disabled.svg");
+  background-size: 30px 30px;
+  background-position: left center;
+  background-repeat: no-repeat;
+  height: 40px;
+  padding-left: 30px;
+  cursor: pointer;
+}
+.leaveRadio input[type="radio"]:checked + label {
+  background: url("../img/leave.svg");
+  background-size: 30px 30px;
+  background-position: left center;
+  background-repeat: no-repeat;
+  height: 40px;
+  padding-left: 30px;
+  cursor: pointer;
+}
+.leaveRadio input[type="radio"]:hover + label {
+  background: url("../img/leave.svg");
+  background-size: 30px 30px;
+  background-position: left center;
+  background-repeat: no-repeat;
+  height: 40px;
+  padding-left: 30px;
+  cursor: pointer;
+}
+.leaveRadio input[type="radio"]:checked:hover + label {
+  background: url("../img/leave.svg");
+  background-size: 30px 30px;
+  background-position: left center;
+  background-repeat: no-repeat;
+  height: 40px;
+  padding-left: 30px;
+  cursor: pointer;
+}
+.leaveRadio input[type="radio"]:active + label {
+  position: relative;
+  top: 1px;
+  cursor: pointer;
+}
+
+/* Absent */
+
+.absentRadio input[type="radio"] {
+  display: none;
+  cursor: pointer;
+}
+
+.absentRadio input[type="radio"] + label {
+  background: url("../img/absent-disabled.svg");
+  background-size: 30px 30px;
+  background-position: left center;
+  background-repeat: no-repeat;
+  height: 40px;
+  padding-left: 30px;
+  cursor: pointer;
+}
+.absentRadio input[type="radio"]:checked + label {
+  background: url("../img/absent.svg");
+  background-size: 30px 30px;
+  background-position: left center;
+  background-repeat: no-repeat;
+  height: 40px;
+  padding-left: 30px;
+  cursor: pointer;
+}
+.absentRadio input[type="radio"]:hover + label {
+  background: url("../img/absent.svg");
+  background-size: 30px 30px;
+  background-position: left center;
+  background-repeat: no-repeat;
+  height: 40px;
+  padding-left: 30px;
+  cursor: pointer;
+}
+.absentRadio input[type="radio"]:checked:hover + label {
+  background: url("../img/absent.svg");
+  background-size: 30px 30px;
+  background-position: left center;
+  background-repeat: no-repeat;
+  height: 40px;
+  padding-left: 30px;
+  cursor: pointer;
+}
+.absentRadio input[type="radio"]:active + label {
+  position: relative;
+  top: 1px;
+  cursor: pointer;
+}
+
+.lateRadio input[type="radio"] {
+  display: none;
+  cursor: pointer;
+}
+
+/* Late */
+.lateRadio input[type="radio"] + label {
+  background: url("../img/late-disabled.svg");
+  background-size: 30px 30px;
+  background-position: left center;
+  background-repeat: no-repeat;
+  height: 40px;
+  padding-left: 30px;
+  cursor: pointer;
+}
+.lateRadio input[type="radio"]:checked + label {
+  background: url("../img/late.svg");
+  background-size: 30px 30px;
+  background-position: left center;
+  background-repeat: no-repeat;
+  height: 40px;
+  padding-left: 30px;
+  cursor: pointer;
+}
+.lateRadio input[type="radio"]:hover + label {
+  background: url("../img/late.svg");
+  background-size: 30px 30px;
+  background-position: left center;
+  background-repeat: no-repeat;
+  height: 40px;
+  padding-left: 30px;
+  cursor: pointer;
+}
+.lateRadio input[type="radio"]:checked:hover + label {
+  background: url("../img/late.svg");
+  background-size: 30px 30px;
+  background-position: left center;
+  background-repeat: no-repeat;
+  height: 40px;
+  padding-left: 30px;
+  cursor: pointer;
+}
+.lateRadio input[type="radio"]:active + label {
+  position: relative;
+  top: 1px;
+  cursor: pointer;
+}
+
+
+/* SchooolLate */
+.SchoollateRadio input[type="radio"] + label {
+  background: url("../img/สายรร.-disable.svg");
+  background-size: 30px 30px;
+  background-position: left center;
+  background-repeat: no-repeat;
+  height: 40px;
+  padding-left: 30px;
+  cursor: pointer;
+}
+.SchoollateRadio input[type="radio"]:checked + label {
+  background: url("../img/สายรร.svg");
+  background-size: 30px 30px;
+  background-position: left center;
+  background-repeat: no-repeat;
+  height: 40px;
+  padding-left: 30px;
+  cursor: pointer;
+}
+.SchoollateRadio input[type="radio"]:hover + label {
+  background: url("../img/สายรร.svg");
+  background-size: 30px 30px;
+  background-position: left center;
+  background-repeat: no-repeat;
+  height: 40px;
+  padding-left: 30px;
+  cursor: pointer;
+}
+.SchoollateRadio input[type="radio"]:checked:hover + label {
+  background: url("../img/สายรร.svg");
+  background-size: 30px 30px;
+  background-position: left center;
+  background-repeat: no-repeat;
+  height: 40px;
+  padding-left: 30px;
+  cursor: pointer;
+}
+.SchoollateRadio input[type="radio"]:active + label {
+  position: relative;
+  top: 1px;
+  cursor: pointer;
+}
+
+
+
+
+/* actRadio */
+.actRadio input[type="radio"] + label {
+  background: url("../img/activity-disabled.svg");
+  background-size: 30px 30px;
+  background-position: left center;
+  background-repeat: no-repeat;
+  height: 40px;
+  padding-left: 30px;
+  cursor: pointer;
+}
+.actRadio input[type="radio"]:checked + label {
+  background: url("../img/activity.svg");
+  background-size: 30px 30px;
+  background-position: left center;
+  background-repeat: no-repeat;
+  height: 40px;
+  padding-left: 30px;
+  cursor: pointer;
+}
+.actRadio input[type="radio"]:hover + label {
+  background: url("../img/activity.svg");
+  background-size: 30px 30px;
+  background-position: left center;
+  background-repeat: no-repeat;
+  height: 40px;
+  padding-left: 30px;
+  cursor: pointer;
+}
+.actRadio input[type="radio"]:checked:hover + label {
+  background: url("../img/activity.svg");
+  background-size: 30px 30px;
+  background-position: left center;
+  background-repeat: no-repeat;
+  height: 40px;
+  padding-left: 30px;
+  cursor: pointer;
+}
+.actRadio input[type="radio"]:active + label {
+  position: relative;
+  top: 1px;
+  cursor: pointer;
+}
+
+

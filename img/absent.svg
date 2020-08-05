@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #dc3545;
+      }
+
+      .cls-2 {
+        font-size: 31.75px;
+        fill: #fff;
+        text-anchor: end;
+        font-family: Prompt;
+        font-weight: 300;
+      }
+    </style>
+  </defs>
+  <circle class="cls-1" cx="15" cy="15" r="15"/>
+  <text id="ข" class="cls-2" x="24.529" y="23.622"><tspan x="24.529">ข</tspan></text>
+</svg>

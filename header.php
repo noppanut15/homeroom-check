@@ -1,5 +1,5 @@
-<?php 
-    include './include/config.php'; 
+<?php
+include './include/config.php';
 ?>
 <!DOCTYPE html>
 <html lang="th">
@@ -22,3 +22,4 @@
 </head>
 
 <body>
+    <?php include './include/auth.php'; ?>
