@@ -1,6 +1,7 @@
 <?php
 include './header.php'; ?>
 <div class="container">
+    <?php if(date("H") >= 9) header("location: timeout.php"); ?>
     <form action="../include/submission.php" method="post">
         <div class="row my-3 bg-light rounded shadow-lg">
             <div class="col-12">
