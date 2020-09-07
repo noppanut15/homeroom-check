@@ -82,6 +82,23 @@
                 </div>
             </div>
         </a>
+        <a href="weekly_report.php" class="text-decoration-none text-body">
+            <div class="col">
+                <div class="card mb-3">
+                    <div class="row g-0">
+                        <div class="col-md-2 p-2 text-center">
+                            <img src="../img/pencil.png" alt="Search" width="100%" style="max-height: 90px;max-width: 90px;">
+                        </div>
+                        <div class="col-md-10 bg-light">
+                            <div class="card-body">
+                                <h5 class="card-title">รายงานข้อมูลรายสัปดาห์</h5>
+                                <p class="card-text">รายงานข้อมูลรายสัปดาห์ </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
     </div>
     <h4 class="font-weight-bolder"><i class="fas fa-users"></i> จัดการผู้ใช้งาน</h4>
     <hr>
