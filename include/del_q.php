@@ -5,7 +5,7 @@ if (isset($_POST['confirm'])) {
     $confirm = $_POST['confirm'];
     if ($confirm == 0) {
         header("location: ./index.php");
-    } else if ($confirm == 1) {
+    } elseif ($confirm == 1) {
         $sql = "DELETE FROM `teacher` WHERE id = $id";
         if ($conn->query($sql) === true) {
             echo '
@@ -13,7 +13,13 @@ if (isset($_POST['confirm'])) {
                 Swal.fire({
                     icon: "success",
                     title: "ลบผู้ใช้สำเร็จ",
-                    text: "ลบ ' . $gender . '' . $name . '' . $lastname . ' เรียบร้อยแล้ว",
+                    text: "ลบ ' .
+                $gender .
+                '' .
+                $name .
+                '' .
+                $lastname .
+                ' เรียบร้อยแล้ว",
                     showConfirmButton: false,
                     timer: 2000,
                     timerProgressBar: true
@@ -30,7 +36,9 @@ if (isset($_POST['confirm'])) {
                 Swal.fire({
                     icon: "error",
                     title: "เกิดข้อผิดพลาด",
-                    text: "' . $conn->error . '",
+                    text: "' .
+                $conn->error .
+                '",
                     showConfirmButton: true
                   })
                 </script>

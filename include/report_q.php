@@ -17,9 +17,6 @@ if (isset($_GET['date']) && isset($_GET['type'])) {
     if ($row == 0) {
         echo '<tr><th algin=center colspan="6" height=150><h1>ไม่มีการบันทึกข้อมูลประจำวัน</h1></th></tr>';
     } else {
-        echo '<tr><th algin=center colspan="6">รายละเอียดการพบนักเรียน</tr>';
-        echo '<tr><td algin=center colspan="6" height=100 style="font-weight: normal";>'.$data['detail'].'</td></tr>';
-        echo '<tr><th algin=center colspan="6">รายละเอียดการเข้าร่วม</tr>';
         echo '<tr>
                     <th width="40" scope="col">ที่</th>
                     <th width="265" scope="col">ชื่อ-สกุล</th>

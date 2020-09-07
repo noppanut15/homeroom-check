@@ -60,19 +60,17 @@ include '../../include/func.php';
                 </tr>
                 <tr>
                     <td align="center" colspan="6">
-                        <?php
-                        if ($_GET['level'] == 0) {
+                        <?php if ($_GET['level'] == 0) {
                             echo "ทุกระดับชั้น";
                         } else {
                             echo 'ระดับชั้นมัธยมศึกษาปีที่ ' . $_GET['level'];
-                        }
-                        ?>
+                        } ?>
                     </td>
                 </tr>
                 <tr>
                     <td align="center" colspan="6">ประจำวันที่ <?php echo thai_date(
-                                                                    $ac = strtotime("-543 years", strtotime($_GET['date'])),
-                                                                ); ?></td>
+                        $ac = strtotime("-543 years", strtotime($_GET['date']))
+                    ); ?></td>
                 </tr>
                 <tr>
                     <th width="40" scope="col">ที่</th>

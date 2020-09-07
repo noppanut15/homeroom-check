@@ -10,7 +10,11 @@
             <h2>ยืนยันการลบ</h2>
         </div>
         <div class="col-12 text-center">
-            <h3 class="h1"><?php echo $gender.''.$name.'  '.$lastname; ?></h3>
+            <h3 class="h1"><?php echo $gender .
+                '' .
+                $name .
+                '  ' .
+                $lastname; ?></h3>
         </div>
     </div>
     <form action="" method="post" class="row g-2">

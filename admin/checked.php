@@ -23,7 +23,8 @@
                     <label for="inputdatepicker" class="h3">เลือกวันที่ที่ต้องการ</label>
                 </div>
                 <div class="col-md-2 col-sm-12">
-                    <input id="inputdatepicker" class="form-control datepicker" name="date" data-date-format="mm-dd-yyyy">
+                    <input id="inputdatepicker" class="form-control datepicker" name="date"
+                        data-date-format="mm-dd-yyyy">
                 </div>
             </div>
             <div class="row">
@@ -50,26 +51,27 @@
         </div>
     </form>
     <div class="row">
-    <?php include '../include/checked_q.php'; ?>
+        <?php include '../include/checked_q.php'; ?>
 
     </div>
     <div class="row my-3">
         <div class="col-12">
             <a href="./" class="text-decoration-none">
-                <button class="btn btn-lg btn-primary btn-block"><i class="fas fa-home"></i> กลับเข้าสู่หน้าหลัก</button>
+                <button class="btn btn-lg btn-primary btn-block"><i class="fas fa-home"></i>
+                    กลับเข้าสู่หน้าหลัก</button>
             </a>
         </div>
     </div>
 </div>
 <!-- JQuery Thai Date BY Ratchanon Panmas -->
 <script>
-    $(document).ready(function() {
-        $('.datepicker').datepicker({
-            format: 'dd-mm-yyyy',
-            todayBtn: true,
-            language: 'th', //เปลี่ยน label ต่างของ ปฏิทิน ให้เป็น ภาษาไทย   (ต้องใช้ไฟล์ bootstrap-datepicker.th.min.js นี้ด้วย)
-            thaiyear: true //Set เป็นปี พ.ศ.
-        }).datepicker("setDate", "0"); //กำหนดเป็นวันปัจุบัน
-    });
+$(document).ready(function() {
+    $('.datepicker').datepicker({
+        format: 'dd-mm-yyyy',
+        todayBtn: true,
+        language: 'th', //เปลี่ยน label ต่างของ ปฏิทิน ให้เป็น ภาษาไทย   (ต้องใช้ไฟล์ bootstrap-datepicker.th.min.js นี้ด้วย)
+        thaiyear: true //Set เป็นปี พ.ศ.
+    }).datepicker("setDate", "0"); //กำหนดเป็นวันปัจุบัน
+});
 </script>
 <?php include 'footer.php'; ?>

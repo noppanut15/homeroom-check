@@ -13,7 +13,7 @@
     <div class="row mt-3 text-center">
         <div class="col-12">
             <h1>
-            <i class="fas fa-print"></i> สรุปผลการเข้าร่วมกิจกรรมโฮมรูมประจำวัน</h1>
+            <i class="fas fa-print"></i> สรุปผลการเข้าร่วมกิจกรรมหน้าเสาธง</h1>
         </div>
     </div>
     <hr>
@@ -39,7 +39,7 @@
             </tr>
         </thead>
         <tbody>
-            <?php include '../include/report_sum_q.php' ?>
+            <?php include '../include/report_sum_q.php'; ?>
         </tbody>
         <thead>
             <tr>

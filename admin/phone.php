@@ -36,7 +36,7 @@
             </tr>
         </thead>
         <tbody>
-            <?php include '../include/report_phone_sum_q.php' ?>
+            <?php include '../include/report_phone_sum_q.php'; ?>
         </tbody>
         <thead>
             <tr>

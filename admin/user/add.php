@@ -87,7 +87,7 @@
                 </div>
             </div>
         </div>
-        <?php include '../../include/add_q.php';?>
+        <?php include '../../include/add_q.php'; ?>
         <div class="col-12">
             <button type="submit" name="submit" value="submit" class="btn btn-success btn-lg btn-block"><i class="fas fa-user-plus"></i> เพิ่มผู้ใช้</button>
         </div>

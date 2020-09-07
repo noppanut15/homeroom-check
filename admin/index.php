@@ -5,7 +5,9 @@
             <h1 class="h2"><i class="fas fa-user-shield"></i> หน้าผู้ดูแลระบบ</h1>
         </div>
         <div class="col-md-6 col-sm-12 text-center text-md-right my-auto">
-            <h2 class="h5"><i class="fas fa-calendar-day"></i> <?php echo thai_date(time()); ?></h2>
+            <h2 class="h5"><i class="fas fa-calendar-day"></i> <?php echo thai_date(
+                time()
+            ); ?></h2>
         </div>
         <hr>
     </div>
@@ -22,7 +24,7 @@
                         <div class="col-md-10 bg-light">
                             <div class="card-body">
                                 <h5 class="card-title">รายงานผล</h5>
-                                <p class="card-text">รายงานข้อมูลการเข้าร่วมกิจกรรโฮมรูมของนักเรียน</p>
+                                <p class="card-text">รายงานข้อมูลการเข้าร่วมกิจกรรมหน้าเสาธง</p>
                             </div>
                         </div>
                     </div>
@@ -63,6 +65,23 @@
                 </div>
             </div>
         </a>
+        <a href="edit_status.php" class="text-decoration-none text-body">
+            <div class="col">
+                <div class="card mb-3">
+                    <div class="row g-0">
+                        <div class="col-md-2 p-2 text-center">
+                            <img src="../img/pencil.png" alt="Search" width="100%" style="max-height: 90px;max-width: 90px;">
+                        </div>
+                        <div class="col-md-10 bg-light">
+                            <div class="card-body">
+                                <h5 class="card-title">แก้ไขข้อมูลสถานะนักเรียน</h5>
+                                <p class="card-text">แก้ไขข้อมูลสถานะนักเรียน </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
     </div>
     <h4 class="font-weight-bolder"><i class="fas fa-users"></i> จัดการผู้ใช้งาน</h4>
     <hr>
@@ -97,7 +116,7 @@
                         </div>
                         <div class="col-md-10 bg-light">
                             <div class="card-body">
-                                <h5 class="card-title">ลบประวัติการเข้าร่วมกิจกรรมโฮมรูม</h5>
+                                <h5 class="card-title">ลบประวัติการเข้าร่วมกิจกรรมหน้าเสาธง</h5>
                                 <p class="card-text">ล้างฐานข้อมูลที่บันทึกประวัติการเข้าร่วม</p>
                             </div>
                         </div>

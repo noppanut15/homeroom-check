@@ -27,8 +27,12 @@ if (isset($_POST['date'])) {
             if ($checked_result->num_rows == 0) {
                 echo '
                 <tr>
-                    <th>' . $level[0] . '</th>
-                    <th>' . $room[0] . '</th>
+                    <th>' .
+                    $level[0] .
+                    '</th>
+                    <th>' .
+                    $room[0] .
+                    '</th>
                     <th colspan=4>ไม่มีการบันทึกข้อมูล</th>
                 </tr>';
             } else {
@@ -47,19 +51,60 @@ if (isset($_POST['date'])) {
                 $level_present_sum += $present;
                 $level_absent_sum += $absent[0];
 
-
                 echo '
                 <tr style="vertical-align:middle">
-                    <th>' . $level[0] . '</th>
-                    <th>' . $room[0] . '</th>
-                    <td>' . $present . '</td>
-                    <td class="table-danger">' . $absent[0] . '</td>
-                    <td>' . $all[0] . '</td>
+                    <th>' .
+                    $level[0] .
+                    '</th>
+                    <th>' .
+                    $room[0] .
+                    '</th>
+                    <td>' .
+                    $present .
+                    '</td>
+                    <td class="table-danger">' .
+                    $absent[0] .
+                    '</td>
+                    <td>' .
+                    $all[0] .
+                    '</td>
                     <td style="text-align: right">
-                        <a class="text-decoration-none" target="_blank" href="report/std_report.php?level='.$level[0].'&room='.$room[0].'"><button class="btn btn-sm btn-primary"><i class="fas fa-print"></i> ทั้งหมด ม.'.$level[0].'/'.$room[0].'</button></a>
-                        <a class="text-decoration-none" target="_blank" href="report/std_report.php?level='.$level[0].'&room='.$room[0].'"><button class="btn btn-sm btn-warning"><i class="fas fa-print"></i> ลา ม.'.$level[0].'/'.$room[0].'</button></a>
-                        <a class="text-decoration-none" target="_blank" href="report/std_report.php?level='.$level[0].'&room='.$room[0].'"><button class="btn btn-sm btn-danger"><i class="fas fa-print"></i> ขาด ม.'.$level[0].'/'.$room[0].'</button></a>
-                        <a class="text-decoration-none" target="_blank" href="report/std_report.php?level='.$level[0].'&room='.$room[0].'"><button class="btn btn-sm btn-info"><i class="fas fa-print"></i> สาย ม.'.$level[0].'/'.$room[0].'</button></a>
+                        <a class="text-decoration-none" target="_blank" href="report/std_report.php?level=' .
+                    $level[0] .
+                    '&room=' .
+                    $room[0] .
+                    '"><button class="btn btn-sm btn-primary"><i class="fas fa-print"></i> ทั้งหมด ม.' .
+                    $level[0] .
+                    '/' .
+                    $room[0] .
+                    '</button></a>
+                        <a class="text-decoration-none" target="_blank" href="report/std_report.php?level=' .
+                    $level[0] .
+                    '&room=' .
+                    $room[0] .
+                    '"><button class="btn btn-sm btn-warning"><i class="fas fa-print"></i> ลา ม.' .
+                    $level[0] .
+                    '/' .
+                    $room[0] .
+                    '</button></a>
+                        <a class="text-decoration-none" target="_blank" href="report/std_report.php?level=' .
+                    $level[0] .
+                    '&room=' .
+                    $room[0] .
+                    '"><button class="btn btn-sm btn-danger"><i class="fas fa-print"></i> ขาด ม.' .
+                    $level[0] .
+                    '/' .
+                    $room[0] .
+                    '</button></a>
+                        <a class="text-decoration-none" target="_blank" href="report/std_report.php?level=' .
+                    $level[0] .
+                    '&room=' .
+                    $room[0] .
+                    '"><button class="btn btn-sm btn-info"><i class="fas fa-print"></i> สาย ม.' .
+                    $level[0] .
+                    '/' .
+                    $room[0] .
+                    '</button></a>
                     </td>
                 </tr>';
             }
@@ -67,15 +112,39 @@ if (isset($_POST['date'])) {
 
         echo '
         <tr class="table-primary" style="vertical-align:middle">
-            <th align=center colspan=2 width=100>รวมชั้น.' . $level[0] . '</th>
-            <th>' . $level_present_sum . '</th>
-            <th>' . $level_absent_sum . '</th>
-            <th>' . $level_all_sum . '</th>
+            <th align=center colspan=2 width=100>รวมชั้น.' .
+            $level[0] .
+            '</th>
+            <th>' .
+            $level_present_sum .
+            '</th>
+            <th>' .
+            $level_absent_sum .
+            '</th>
+            <th>' .
+            $level_all_sum .
+            '</th>
             <td style="text-align: right">
-                <a class="text-decoration-none" target="_blank" href="report/std_report.php?level='.$level[0].'"><button class="btn btn-sm btn-primary"><i class="fas fa-print"></i> ทั้งหมด ม.'.$level[0].'</button></a>
-                <a class="text-decoration-none" target="_blank" href="report/std_report.php?level='.$level[0].'"><button class="btn btn-sm btn-warning"><i class="fas fa-print"></i> ลา ม.'.$level[0].'</button></a>
-                <a class="text-decoration-none" target="_blank" href="report/std_report.php?level='.$level[0].'"><button class="btn btn-sm btn-danger"><i class="fas fa-print"></i> ขาด ม.'.$level[0].'</button></a>
-                <a class="text-decoration-none" target="_blank" href="report/std_report.php?level='.$level[0].'"><button class="btn btn-sm btn-info"><i class="fas fa-print"></i> สาย ม.'.$level[0].'</button></a>           
+                <a class="text-decoration-none" target="_blank" href="report/std_report.php?level=' .
+            $level[0] .
+            '"><button class="btn btn-sm btn-primary"><i class="fas fa-print"></i> ทั้งหมด ม.' .
+            $level[0] .
+            '</button></a>
+                <a class="text-decoration-none" target="_blank" href="report/std_report.php?level=' .
+            $level[0] .
+            '"><button class="btn btn-sm btn-warning"><i class="fas fa-print"></i> ลา ม.' .
+            $level[0] .
+            '</button></a>
+                <a class="text-decoration-none" target="_blank" href="report/std_report.php?level=' .
+            $level[0] .
+            '"><button class="btn btn-sm btn-danger"><i class="fas fa-print"></i> ขาด ม.' .
+            $level[0] .
+            '</button></a>
+                <a class="text-decoration-none" target="_blank" href="report/std_report.php?level=' .
+            $level[0] .
+            '"><button class="btn btn-sm btn-info"><i class="fas fa-print"></i> สาย ม.' .
+            $level[0] .
+            '</button></a>           
             </td>
         </tr>';
         $whole_all_sum += $level_all_sum;
@@ -83,13 +152,18 @@ if (isset($_POST['date'])) {
         $whole_absent_sum += $level_absent_sum;
     }
 
-
     echo '
     <tr class="table-danger" style="vertical-align:middle">
         <th align=center colspan=2>รวมทั้งหมด</th>
-        <th>' . $whole_present_sum . '</th>
-        <th>' . $whole_absent_sum . '</th>
-        <th>' . $whole_all_sum . '</th>
+        <th>' .
+        $whole_present_sum .
+        '</th>
+        <th>' .
+        $whole_absent_sum .
+        '</th>
+        <th>' .
+        $whole_all_sum .
+        '</th>
         <td style="text-align: right">
                 <a class="text-decoration-none" target="_blank" href="report/std_report.php?level=0"><button class="btn btn-sm btn-primary"><i class="fas fa-print"></i> ทั้งหมด</button></a>
                 <a class="text-decoration-none" target="_blank" href="report/std_report.php?level=0"><button class="btn btn-sm btn-warning"><i class="fas fa-print"></i> ลา</button></a>
@@ -99,4 +173,3 @@ if (isset($_POST['date'])) {
     </tr>';
 }
 $conn->close();
-

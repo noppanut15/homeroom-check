@@ -36,7 +36,7 @@
             </tr>
         </thead>
         <tbody>
-            <?php include '../../include/user_q.php' ?>
+            <?php include '../../include/user_q.php'; ?>
         </tbody>
         <thead>
             <tr>

@@ -1,6 +1,5 @@
 <?php
-include './include/config.php';
-?>
+include './include/config.php'; ?>
 <!DOCTYPE html>
 <html lang="th">
 
@@ -18,6 +17,7 @@ include './include/config.php';
 
     <!-- Sweetalert -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script src="https://kit.fontawesome.com/961714017d.js" crossorigin="anonymous"></script>
 
 </head>
 

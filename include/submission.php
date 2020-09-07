@@ -7,11 +7,10 @@ $today = gettoday("d-m-Y");
 $d = gettoday("d");
 $m = gettoday("m");
 
-if (isset($_POST['group'])) {
+if (isset($_SESSION['level']) && isset($_SESSION['room'])) {
     /* ลงข้อมูลสำรวจสภาพการเรียนการสอน */
     $level = $_SESSION['level'];
     $room = $_SESSION['room'];
-    $detail = $_POST["detail"];
     // echo $detail;
 
     // Check Duplicate
@@ -33,7 +32,7 @@ if (isset($_POST['group'])) {
         }
 
         //MARK AS Checked
-        $sql = "INSERT INTO checked_room(level, room, date, detail) VALUES ($level,$room,'$today','$detail')";
+        $sql = "INSERT INTO checked_room(level, room, date) VALUES ($level,$room,'$today')";
         //echo $sql;
         $result = $conn->query($sql);
 

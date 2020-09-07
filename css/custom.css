@@ -173,7 +173,6 @@ input[type="radio"] {
   cursor: pointer;
 }
 
-
 /* SchooolLate */
 .SchoollateRadio input[type="radio"] + label {
   background: url("../img/สายรร.-disable.svg");
@@ -217,9 +216,6 @@ input[type="radio"] {
   cursor: pointer;
 }
 
-
-
-
 /* actRadio */
 .actRadio input[type="radio"] + label {
   background: url("../img/activity-disabled.svg");
@@ -262,5 +258,3 @@ input[type="radio"] {
   top: 1px;
   cursor: pointer;
 }
-
-

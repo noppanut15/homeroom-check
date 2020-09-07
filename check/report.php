@@ -12,7 +12,7 @@
 <div class="container">
     <div class="row mt-3 text-center">
         <div class="col-12">
-            <h1><i class="fas fa-print"></i> รายงานการเข้าร่วมกิจกรรมโฮมรูม ห้อง ม. <?php echo $_SESSION[
+            <h1><i class="fas fa-print"></i> รายงานการเข้าร่วมกิจกรรมหน้าเสาธง ห้อง ม. <?php echo $_SESSION[
                 'level'
             ] .
                 '/' .

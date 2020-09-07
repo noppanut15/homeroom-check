@@ -26,20 +26,61 @@ if (isset($_POST['date'])) {
 
         echo '
         <tr class="table-striped table-primary" style="vertical-align:middle">
-            <th align=center width=200>รวมชั้น.' . $level[0] . '</th>
-            <th>' . $level_present . '</th>
-            <th>' . $level_absent[0] . '</th>
-            <th>' . $level_all[0] . '</th>
+            <th align=center width=200>รวมชั้น.' .
+            $level[0] .
+            '</th>
+            <th>' .
+            $level_present .
+            '</th>
+            <th>' .
+            $level_absent[0] .
+            '</th>
+            <th>' .
+            $level_all[0] .
+            '</th>
             <td style="text-align: right">
-                <div class="btn-group">
-                    <a class="btn btn-sm btn-success text-decoration-none" target="_blank" href="report/detail_report.php?level=' . $level[0] . '&date=' . $date . '"><i class="fas fa-print"></i> รายละเอียดการพบนักเรียน ม.' . $level[0] . '</a>
-                    <a class="btn btn-sm btn-primary text-decoration-none" target="_blank" href="report/std_report.php?level=' . $level[0] . '&type=0&date=' . $date . '"><i class="fas fa-print"></i> ทั้งหมด ม.' . $level[0] . '</a>
-                    <a class="btn btn-sm btn-warning text-decoration-none" target="_blank" href="report/std_report.php?level=' . $level[0] . '&type=2&date=' . $date . '"><i class="fas fa-print"></i> ลา ม.' . $level[0] . '</a>
-                    <a class="btn btn-sm btn-danger text-decoration-none" target="_blank" href="report/std_report.php?level=' . $level[0] . '&type=3&date=' . $date . '"><i class="fas fa-print"></i> ขาด ม.' . $level[0] . '</a>
-                    <a class="btn btn-sm btn-info text-decoration-none" target="_blank" href="report/std_report.php?level=' . $level[0] . '&type=4&date=' . $date . '"><i class="fas fa-print"></i> สายโฮมรูม ม.' . $level[0] . '</button></a>           
-                    <a class="btn btn-sm text-decoration-none" target="_blank" href="report/std_report.php?level=' . $level[0] . '&type=5&date=' . $date . '" style="background-color:#bd93f9;"><i class="fas fa-print"></i> สายรร. ม.' . $level[0] . '</a>
-                    <a class="btn btn-sm text-decoration-none" target="_blank" href="report/std_report.php?level=' . $level[0] . '&type=6&date=' . $date . '" style="background-color:#ff79c6;"><i class="fas fa-print"></i> กิจกรรม ม.' . $level[0] . '</a>           
-                </div>
+                <a class="text-decoration-none" target="_blank" href="report/std_report.php?level=' .
+            $level[0] .
+            '&type=0&date=' .
+            $date .
+            '"><button class="btn btn-sm btn-primary"><i class="fas fa-print"></i> ทั้งหมด ม.' .
+            $level[0] .
+            '</button></a>
+                <a class="text-decoration-none" target="_blank" href="report/std_report.php?level=' .
+            $level[0] .
+            '&type=2&date=' .
+            $date .
+            '"><button class="btn btn-sm btn-warning"><i class="fas fa-print"></i> ลา ม.' .
+            $level[0] .
+            '</button></a>
+                <a class="text-decoration-none" target="_blank" href="report/std_report.php?level=' .
+            $level[0] .
+            '&type=3&date=' .
+            $date .
+            '"><button class="btn btn-sm btn-danger"><i class="fas fa-print"></i> ขาด ม.' .
+            $level[0] .
+            '</button></a>
+                <a class="text-decoration-none" target="_blank" href="report/std_report.php?level=' .
+            $level[0] .
+            '&type=4&date=' .
+            $date .
+            '"><button class="btn btn-sm btn-info"><i class="fas fa-print"></i> สายโฮมรูม ม.' .
+            $level[0] .
+            '</button></a>           
+                <a class="text-decoration-none" target="_blank" href="report/std_report.php?level=' .
+            $level[0] .
+            '&type=5&date=' .
+            $date .
+            '"><button class="btn btn-sm" style="background-color:#bd93f9;"><i class="fas fa-print"></i> สายรร. ม.' .
+            $level[0] .
+            '</button></a>
+                <a class="text-decoration-none" target="_blank" href="report/std_report.php?level=' .
+            $level[0] .
+            '&type=6&date=' .
+            $date .
+            '"><button class="btn btn-sm" style="background-color:#ff79c6;"><i class="fas fa-print"></i> กิจกรรม ม.' .
+            $level[0] .
+            '</button></a>           
             </td>
         </tr>';
         $whole_all_sum += $level_all[0];
@@ -47,24 +88,38 @@ if (isset($_POST['date'])) {
         $whole_absent_sum += $level_absent[0];
     }
 
-
     echo '
     <tr class="table-danger" style="vertical-align:middle">
         <th align=center>รวมทั้งหมด</th>
-        <th>' . $whole_present_sum . '</th>
-        <th>' . $whole_absent_sum . '</th>
-        <th>' . $whole_all_sum . '</th>
+        <th>' .
+        $whole_present_sum .
+        '</th>
+        <th>' .
+        $whole_absent_sum .
+        '</th>
+        <th>' .
+        $whole_all_sum .
+        '</th>
         <td style="text-align: right">
-            <div class="btn-group">
-                <a class="btn btn-sm btn-success text-decoration-none" target="_blank" href="report/detail_report.php?level=' . $level[0] . '&date=' . $date . '"><i class="fas fa-print"></i> รายละเอียดการพบนักเรียน ทั้งหมด</a>
-                <a class="btn btn-sm btn-primary text-decoration-none" target="_blank" href="report/std_report.php?level=0&type=0&date=' . $date . '"><i class="fas fa-print"></i> ทั้งหมด</a>
-                <a class="btn btn-sm btn-warning text-decoration-none" target="_blank" href="report/std_report.php?level=0&type=2&date=' . $date . '"><i class="fas fa-print"></i> ลา</a>
-                <a class="btn btn-sm btn-danger text-decoration-none" target="_blank" href="report/std_report.php?level=0&type=3&date=' . $date . '"><i class="fas fa-print"></i> ขาด</a>
-                <a class="btn btn-sm btn-info text-decoration-none" target="_blank" href="report/std_report.php?level=0&type=4&date=' . $date . '"><i class="fas fa-print"></i> สายโฮมรูม</button></a>           
-                <a class="btn btn-sm text-decoration-none" target="_blank" href="report/std_report.php?level=0&type=5&date=' . $date . '" style="background-color:#bd93f9;"><i class="fas fa-print"></i> สายรร.</a>
-                <a class="btn btn-sm text-decoration-none" target="_blank" href="report/std_report.php?level=0&type=6&date=' . $date . '" style="background-color:#ff79c6;"><i class="fas fa-print"></i> กิจกรรม</a>           
-            </div>
-         </td>
+                <a class="text-decoration-none" target="_blank" href="report/std_report.php?level=0&type=0&date=' .
+        $date .
+        '"><button class="btn btn-sm btn-primary"><i class="fas fa-print"></i> ทั้งหมด</button></a>
+                <a class="text-decoration-none" target="_blank" href="report/std_report.php?level=0&type=2&date=' .
+        $date .
+        '"><button class="btn btn-sm btn-warning"><i class="fas fa-print"></i> ลา</button></a>
+                <a class="text-decoration-none" target="_blank" href="report/std_report.php?level=0&type=3&date=' .
+        $date .
+        '"><button class="btn btn-sm btn-danger"><i class="fas fa-print"></i> ขาด</button></a>
+                <a class="text-decoration-none" target="_blank" href="report/std_report.php?level=0&type=4&date=' .
+        $date .
+        '"><button class="btn btn-sm btn-info"><i class="fas fa-print"></i> สายโฮมรูม</button></a>           
+                <a class="text-decoration-none" target="_blank" href="report/std_report.php?level=0&type=5&date=' .
+        $date .
+        '"><button class="btn btn-sm" style="background-color:#bd93f9;"><i class="fas fa-print"></i> สายรร.</button></a>
+                <a class="text-decoration-none" target="_blank" href="report/std_report.php?level=0&type=6&date=' .
+        $date .
+        '"><button class="btn btn-sm" style="background-color:#ff79c6;"><i class="fas fa-print"></i> กิจกรรม</button></a>           
+        </td>
     </tr>';
 }
 $conn->close();

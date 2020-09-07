@@ -22,7 +22,13 @@ if (isset($_POST['submit'])) {
         Swal.fire({
             icon: "success",
             title: "เพิ่มผู้ใช้สำเร็จ",
-            text: "เพิ่ม ' . $gender . '' . $name . '  ' . $lastname . ' เรียบร้อยแล้ว",
+            text: "เพิ่ม ' .
+            $gender .
+            '' .
+            $name .
+            '  ' .
+            $lastname .
+            ' เรียบร้อยแล้ว",
             showConfirmButton: true
           })
         </script>
@@ -33,7 +39,9 @@ if (isset($_POST['submit'])) {
         Swal.fire({
             icon: "error",
             title: "เกิดข้อผิดพลาด",
-            text: "' . $conn->error . '",
+            text: "' .
+            $conn->error .
+            '",
             showConfirmButton: true
           })
         </script>

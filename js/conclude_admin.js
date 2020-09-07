@@ -5,14 +5,14 @@ check.addEventListener("click", () => {
   let leave = document.querySelectorAll(".leave:checked").length;
   let absent = document.querySelectorAll(".absent:checked").length;
   let late = document.querySelectorAll(".late:checked").length;
-  // let Schoollate = document.querySelectorAll(".Schoollate:checked").length;
+  let Schoollate = document.querySelectorAll(".Schoollate:checked").length;
   let act = document.querySelectorAll(".act:checked").length;
 
   let showPresent = document.querySelector("#showPresent");
   let showLeave = document.querySelector("#showLeave");
   let showAbsent = document.querySelector("#showAbsent");
   let showLate = document.querySelector("#showLate");
-  // let showSchoolLate = document.querySelector("#showSchoolLate");
+  let showSchoolLate = document.querySelector("#showSchoolLate");
   let showAct = document.querySelector("#showAct");
   let showRow = document.querySelector("#showRow");
 
@@ -20,13 +20,13 @@ check.addEventListener("click", () => {
 
   showPresent.innerHTML = "มา " + present + " คน";
   showLeave.innerHTML = "ลา " + leave + " คน";
-  showLate.innerHTML = "สายแถว " + late + " คน";
-  // showSchoolLate.innerHTML = "สายรร. " + Schoollate + " คน";
   showAbsent.innerHTML = "ขาด " + absent + " คน";
+  showLate.innerHTML = "สายแถว " + late + " คน";
+  showSchoolLate.innerHTML = "สายรร. " + Schoollate + " คน";
   showAct.innerHTML = "กิจกรรม " + act + " คน";
 
   console.log("Present " + present);
   console.log("Leave " + leave);
   console.log("Absent " + absent);
-  console.log("Late " + late);
+  console.log("Absent " + late);
 });

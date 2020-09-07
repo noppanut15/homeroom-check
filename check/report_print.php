@@ -51,34 +51,32 @@ include '../include/func.php';
     </style>
 </head>
 <?php
-    $type = $_GET['type'];
+$type = $_GET['type'];
 
-    if($type == -1){
-        $type_name = "ทั้งหมด";
-    } else if($type == 0){
-        $type_name = "มา";
-    } else if($type == 1){
-        $type_name = "ไม่เข้าร่วมทั้งหมด";
-    } else if($type == 2){
-        $type_name = "ลา";
-    } else if($type == 3){
-        $type_name = "ขาด";
-    } else if($type == 4){
-        $type_name = "สายโฮมรูม";
-    } else if($type == 5){
-        $type_name = "สายรร.";
-    } else if($type == 6){
-        $type_name = "กิจกรรม";
-    }
-
-
+if ($type == -1) {
+    $type_name = "ทั้งหมด";
+} elseif ($type == 0) {
+    $type_name = "มา";
+} elseif ($type == 1) {
+    $type_name = "ไม่เข้าร่วมทั้งหมด";
+} elseif ($type == 2) {
+    $type_name = "ลา";
+} elseif ($type == 3) {
+    $type_name = "ขาด";
+} elseif ($type == 4) {
+    $type_name = "สายโฮมรูม";
+} elseif ($type == 5) {
+    $type_name = "สายรร.";
+} elseif ($type == 6) {
+    $type_name = "กิจกรรม";
+}
 ?>
 <body>
     <div class="print">
         <table border="0">
             <thead>
                 <tr>
-                    <td align="center" colspan="5">รายงานการเข้าร่วมกิจกรรมโฮมรูม (<?php echo $type_name; ?>)</td>
+                    <td align="center" colspan="5">รายงานการเข้าร่วมกิจกรรมหน้าเสาธง (<?php echo $type_name; ?>)</td>
                 </tr>
                 <tr>
                     <td align="center" colspan="5">ระดับชั้นมัธยมศึกษาปีที่ <?php echo $_SESSION[
@@ -89,7 +87,7 @@ include '../include/func.php';
                 </tr>
                 <tr>
                     <td align="center" colspan="5">ประจำวันที่ <?php echo thai_date(
-                        $ac = strtotime("-543 years", strtotime($_GET['date'])),
+                        $ac = strtotime("-543 years", strtotime($_GET['date']))
                     ); ?></td>
                 </tr>
                 

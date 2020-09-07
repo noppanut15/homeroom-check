@@ -55,21 +55,17 @@ $type = $_GET['type'];
 
 if ($type == 0) {
     $type_name = "ทั้งหมด";
-} else if ($type == 2) {
+} elseif ($type == 2) {
     $type_name = "ลา";
-} else if ($type == 3) {
+} elseif ($type == 3) {
     $type_name = "ขาด";
-} else if($type == 4){
+} elseif ($type == 4) {
     $type_name = "สายโฮมรูม";
-} else if($type == 5){
+} elseif ($type == 5) {
     $type_name = "สายรร.";
-} else if($type == 6){
+} elseif ($type == 6) {
     $type_name = "กิจกรรม";
 }
-
-
-
-
 ?>
 
 <body>
@@ -77,23 +73,21 @@ if ($type == 0) {
         <table border="0">
             <thead>
                 <tr>
-                    <td align="center" colspan="6">รายงานนักเรียนที่ไม่เข้าร่วมกิจกรรมโฮมรูม (<?php echo $type_name; ?>)</td>
+                    <td align="center" colspan="6">รายงานการเข้าร่วมกิจกรรมหน้าเสาธง (<?php echo $type_name; ?>)</td>
                 </tr>
                 <tr>
                     <td align="center" colspan="6">
-                        <?php
-                        if ($_GET['level'] == 0) {
+                        <?php if ($_GET['level'] == 0) {
                             echo "ทุกระดับชั้น";
                         } else {
                             echo 'ระดับชั้นมัธยมศึกษาปีที่ ' . $_GET['level'];
-                        }
-                        ?>
+                        } ?>
                     </td>
                 </tr>
                 <tr>
                     <td align="center" colspan="6">ประจำวันที่ <?php echo thai_date(
-                                                                    $ac = strtotime("-543 years", strtotime($_GET['date'])),
-                                                                ); ?></td>
+                        $ac = strtotime("-543 years", strtotime($_GET['date']))
+                    ); ?></td>
                 </tr>
                 <tr>
                     <th width="40" scope="col">ที่</th>

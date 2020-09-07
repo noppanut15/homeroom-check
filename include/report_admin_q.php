@@ -17,7 +17,7 @@ if (isset($_GET['date']) && isset($_GET['type'])) {
         // echo '<tr><th algin=center colspan="6" height=150><h1>'.$sql.'</h1></th></tr>';
     } else {
         // Query By type
-        if($level == 0){
+        if ($level == 0) {
             if ($type == 0) {
                 $sql = "SELECT student.stdID, student.gender, student.name, student.lastname, student.level, student.room, student.no,absent.type FROM student RIGHT JOIN absent ON student.stdID = absent.stdID WHERE absent.date = '$date' ORDER BY student.level ASC, student.room ASC,  student.no ASC";
             } else {
@@ -30,7 +30,6 @@ if (isset($_GET['date']) && isset($_GET['type'])) {
                 $sql = "SELECT student.stdID, student.gender, student.name, student.lastname, student.level, student.room, student.no,absent.type FROM student RIGHT JOIN absent ON student.stdID = absent.stdID  WHERE absent.date = '$date' AND absent.type = $type AND level = $level ORDER BY student.room ASC, student.no ASC";
             }
         }
-        
 
         //echo $sql;
 
@@ -62,11 +61,29 @@ if (isset($_GET['date']) && isset($_GET['type'])) {
                 }
                 echo '
                 <tr>
-                    <th align="center">' .$i .'</th>
-                    <th align="left">' .  $row["gender"] .'' .$row["name"] .'  ' .$row["lastname"] .'</th>
-                    <td align="center">' .$row["level"] .'/'.$row["room"].'</td>
-                    <td align="center">' .$row["no"] .'</td>
-                    <th align="center" style="color:' .$color .';">' .$typename .'</td>
+                    <th align="center">' .
+                    $i .
+                    '</th>
+                    <th align="left">' .
+                    $row["gender"] .
+                    '' .
+                    $row["name"] .
+                    '  ' .
+                    $row["lastname"] .
+                    '</th>
+                    <td align="center">' .
+                    $row["level"] .
+                    '/' .
+                    $row["room"] .
+                    '</td>
+                    <td align="center">' .
+                    $row["no"] .
+                    '</td>
+                    <th align="center" style="color:' .
+                    $color .
+                    ';">' .
+                    $typename .
+                    '</td>
                     <td></td>
                 </tr>';
                 // echo '<tr><th algin=center colspan="6" height=150><h1>'.$sql.'</h1></th></tr>';

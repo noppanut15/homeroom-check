@@ -20,6 +20,7 @@ $perm = 1;
 
     <!-- Sweetalert -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script src="https://kit.fontawesome.com/961714017d.js" crossorigin="anonymous"></script>
 
 </head>
 
@@ -31,7 +32,9 @@ $perm = 1;
                 <img src="../img/logo.png" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
                 โรงเรียนเบญจมราชูทิศ
             </a>
-            <small class="navbar-text"><i class="fas fa-user"></i> <?php echo $_SESSION['gender'] .
+            <small class="navbar-text"><i class="fas fa-user"></i> <?php echo $_SESSION[
+                'gender'
+            ] .
                 '' .
                 $_SESSION['name'] .
                 '  ' .
