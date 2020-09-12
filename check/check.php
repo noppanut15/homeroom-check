@@ -4,7 +4,9 @@ include './header.php'; ?>
     <form action="../include/submission.php" method="post">
         <div class="row my-3 bg-light rounded shadow-lg">
             <div class="col-12 bg-danger text-white pt-1">
-                <h2 class="text-center">ลงข้อมูลประจำ<?php echo thai_date(time()); ?>  (<?php echo date('d/m/Y'); ?>)</h2 class="text-center">
+                <h2 class="text-center">ลงข้อมูลประจำ<?php echo thai_date(
+                    time()
+                ); ?>  (<?php echo date('d/m/Y'); ?>)</h2 class="text-center">
             </div>
             <div class="col-12 p-2">
                 <div class="row">
@@ -60,4 +62,5 @@ include './header.php'; ?>
 
 </div>
 <script src="../js/conclude.js"></script>
-<?php include './footer.php'; ?>
+<?php include './footer.php';
+?>

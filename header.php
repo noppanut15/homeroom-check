@@ -22,4 +22,5 @@ include './include/config.php'; ?>
 </head>
 
 <body>
-    <?php include './include/auth.php'; ?>
+    <?php include './include/auth.php';
+?>

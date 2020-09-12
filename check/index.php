@@ -2,7 +2,7 @@
 <div class="container">
     <div class="row my-3">
         <div class="col-12">
-            <h1 class="text-center"><?php echo $title.'<br>'; ?></h1>
+            <h1 class="text-center"><?php echo $title . '<br>'; ?></h1>
             <h2 class="text-center"><?php echo $eng; ?></h2>
             <h2 class="h3 text-center">ยินดีต้อนรับครูประจำชั้น ห้อง <?php echo $_SESSION[
                 'level'
@@ -35,4 +35,5 @@
     </div>
 </div>
 <script src="../js/check.js"></script>
-<?php include './footer.php'; ?>
+<?php include './footer.php';
+?>
