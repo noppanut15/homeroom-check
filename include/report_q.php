@@ -86,9 +86,7 @@ if (isset($_GET['date']) && isset($_GET['type'])) {
                         <td align="center">' .
                     $typename .
                     '</td>
-                        <td align="center">' .
-                    $row["period"] .
-                    '</td>
+                        <td align="center"></td>
                     </tr>';
                 $i++;
             }

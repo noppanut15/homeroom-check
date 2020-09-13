@@ -74,4 +74,5 @@ $(document).ready(function() {
     }).datepicker("setDate", "0"); //กำหนดเป็นวันปัจุบัน
 });
 </script>
-<?php include 'footer.php'; ?>
+<?php include 'footer.php';
+?>

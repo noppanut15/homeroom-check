@@ -1,9 +1,8 @@
 <?php
-include 'func.php';     // Include Function File
+include 'func.php'; // Include Function File
 $conn = conn();
 
 $today = gettoday("d-m-Y");
-
 
 if (isset($_POST['level']) && isset($_POST['room'])) {
     /* ลงข้อมูลสำรวจสภาพการเรียนการสอน */
@@ -13,7 +12,7 @@ if (isset($_POST['level']) && isset($_POST['room'])) {
 
     $stdID = $_POST['stdID'];
     $status = $_POST['status'];
-    
+
     $num_student = count($_POST['stdID']);
 
     // Data Debugging
@@ -24,25 +23,22 @@ if (isset($_POST['level']) && isset($_POST['room'])) {
     //     echo "$i) ID :  $stdID[$i] Status: $status[$i]<br>";
     // }
 
-
     for ($i = 1; $i <= $num_student; ++$i) {
-        
         $check_have_data_sql = "SELECT id FROM absent WHERE stdID = $stdID[$i] AND date = '$date'";
         // echo $check_have_data_sql.'<br>';
-        
+
         $check_have_data_result = $conn->query($check_have_data_sql);
 
-
-        if($check_have_data_result->num_rows == 0){
-            // If don't have data INSERT 
-            if($status[$i] != ""){
+        if ($check_have_data_result->num_rows == 0) {
+            // If don't have data INSERT
+            if ($status[$i] != "") {
                 $sql = "INSERT INTO absent(stdID, type, date) VALUES ($stdID[$i],$status[$i],'$date')";
                 // echo "$i $sql <br>";
                 $result = $conn->query($sql);
             }
-        } elseif($check_have_data_result->num_rows == 1) {
+        } elseif ($check_have_data_result->num_rows == 1) {
             // If have data
-            if($status[$i] == ""){
+            if ($status[$i] == "") {
                 $sql = "DELETE FROM absent WHERE stdID = $stdID[$i] AND date = '$date'";
                 // echo "$i $sql <br>";
                 $result = $conn->query($sql);
@@ -51,12 +47,12 @@ if (isset($_POST['level']) && isset($_POST['room'])) {
                 // echo "$i $sql <br>";
                 $result = $conn->query($sql);
             }
-
-            
         }
-
     }
     header("location: ../admin/success.php?level=$level&room=$room");
 } else {
     header("location: ../admin/error.php");
 }
+
+
+

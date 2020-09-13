@@ -7,8 +7,8 @@ $school = "โรงเรียนเบญจมราชูทิศ";
 // Database
 $host = "localhost";
 $username = "root";
-$password = "00000";
-$database = "activity-check";
+$password = "";
+$database = "bm_homeroom";
 
 date_default_timezone_set('Asia/Bangkok');
 ?>

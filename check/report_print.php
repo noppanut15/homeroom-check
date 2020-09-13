@@ -1,4 +1,6 @@
-<?php include '../include/session.php';
+<?php 
+$perm = 1;
+include '../include/session.php';
 include '../include/func.php';
 ?>
 <!DOCTYPE html>
